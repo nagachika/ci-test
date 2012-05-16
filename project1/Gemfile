@@ -1,5 +1,8 @@
 source "http://rubygems.org"
 
+gem "mongoid"
+gem "bson_ext"
+
 group :development do
   gem "rake"
   gem "rspec"

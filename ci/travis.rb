@@ -75,9 +75,6 @@ end
 # puts "  #{`cat /etc/issue`}"
 # puts "  #{`uname -a`}"
 # puts "  #{`ruby -v`}"
-# puts "  #{`mysql --version`}"
-# # puts "  #{`pg_config --version`}"
-# puts "  SQLite3: #{`sqlite3 -version`}"
 # `gem env`.each_line {|line| print "   #{line}"}
 # puts "   Bundled gems:"
 # `bundle show`.each_line {|line| print "     #{line}"}
@@ -88,11 +85,11 @@ failures = results.select { |key, value| value == false }
 
 if failures.empty?
   puts
-  puts "Rails build finished successfully"
+  puts "ci-test build finished successfully"
   exit(true)
 else
   puts
-  puts "Rails build FAILED"
+  puts "ci-test build FAILED"
   puts "Failed components: #{failures.map { |component| component.first }.join(', ')}"
   exit(false)
 end
