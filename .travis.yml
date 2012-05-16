@@ -1,0 +1,8 @@
+cript: 'ci/travis.rb'
+before_install:
+  - gem install bundler
+rvm:
+  - 1.9.3
+env:
+  - "GEM=project1"
+  - "GEM=project2"
